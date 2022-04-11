@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+
+    body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        #title {
+            margin-top: 20px;
+            letter-spacing: 5px;
+            font-family: 'Raleway', sans-serif;
+        }
+        #user-container{
+            margin-top: 10px;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            padding: 100px 40px;
+        }
+       
+
+        header{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(41, 41, 41);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            border-bottom: 1px solid aqua;
+            nav{
+                width: 90%;
+                display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            a {
+                color: aliceblue;
+                text-decoration: none;
+                letter-spacing: .1rem;
+                animation: ease 0.5s;
+                transition: all ease 0.5s;
+
+                &:hover,
+                    &:focus { 
+                        
+                        color: rgb(33, 207, 227);
+                      
+                    }
+            }
+        }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;  
+            }
+            .getButtonsBox{
+                padding: 20px;
+                background-color: rgb(16, 88, 130);
+                width: 100%;
+                color: aliceblue;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+
+                .btn{
+                    padding: 10px 40px;
+                    border: 1px solid white;
+                    background: none;
+                    color: white;
+                    letter-spacing: .2rem;
+                    animation: ease 0.5s;
+                    transition: all ease 0.5s;
+
+                    &:hover,
+                    &:focus { 
+                        border: 1px solid rgb(33, 207, 227);
+                        color: rgb(33, 207, 227);
+                      
+                    }
+            }
+                    
+        }}}

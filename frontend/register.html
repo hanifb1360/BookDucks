@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+        
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="profile.html">PROFILE</a>
+            
+
+        </nav>
+        <div id="loggedInMessageBox"><p id="loggedInMessage"></p></div>
+    </header>
+
+    <main>
+
+        <div class="box" id="loginBox">
+            <h2>LOGIN</h2>
+            <div class="inputBox">
+                <label for="user">Email/Username</label>
+                <input type="text" id="user">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <button id="login" onclick="login()">SIGNIN</button>
+        </div>
+
+
+        <div class="box" id="registerBox">
+            <h2>REGISTER</h2>
+
+            <div class="inputBox">
+                <label for="registerUser">Username:</label>
+                <input type="text" id="registerUser">
+                <label for="registerEmail">E-mail:</label>
+                <input type="email" id="registerEmail">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword">
+            </div>
+
+            <button id="register" onclick="register()">SIGNUP</button>
+        </div>
+
+
+    </main>
+
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

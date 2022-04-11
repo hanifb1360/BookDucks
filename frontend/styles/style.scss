@@ -1,0 +1,204 @@
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    
+
+    body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        #background {
+            z-index: -10;
+            position: fixed;
+            width: 100%;
+        }
+  
+        
+
+       
+
+        header{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(41, 41, 41);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid aqua;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            #logo{
+                font-family: 'Chakra Petch', sans-serif;
+                color: aqua;
+                letter-spacing: 40px;
+
+            }
+            
+            nav{
+                width: 90%;
+                display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            a {
+                color: aliceblue;
+                text-decoration: none;
+                letter-spacing: .1rem;
+                animation: ease 0.5s;
+                transition: all ease 0.5s;
+
+                &:hover,
+                    &:focus { 
+                        
+                        color: rgb(33, 207, 227);
+                      
+                    }
+            }
+        }
+        #loggedInMessageBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 10%;
+            background-color: rgb(215, 143, 9);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            color: aliceblue;
+            z-index: 5;
+            right: 10px;
+            top: 11%;
+            border-radius: 25px;
+            position: fixed;
+        }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            
+            
+            width: 100%;
+            gap: 10px;  
+            }
+            .getButtonsBox{
+                padding: 20px;
+                background-color: rgb(16, 88, 130);
+                width: 100%;
+                color: aliceblue;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                position: absolute;
+                top: 100px;
+                z-index: -1;
+                
+
+                .btn{
+                    padding: 10px 40px;
+                    border: 1px solid white;
+                    background: none;
+                    color: white;
+                    letter-spacing: .2rem;
+                    animation: ease 0.5s;
+                    transition: all ease 0.5s;
+
+                    &:hover,
+                    &:focus { 
+                        border: 1px solid rgb(33, 207, 227);
+                        color: rgb(33, 207, 227);
+                      
+                    }
+            }
+                    
+                }
+            }
+
+            #library{
+                display: flex;
+                justify-content: space-around;
+                z-index: -2;
+                gap: 60px;
+                align-items: center;
+                width: 100%;
+                
+                
+                .img {
+                 width: 50%;
+                 margin-top: 10px;
+                 box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+                }
+                
+                 
+
+                #books-container {
+                    width: 40%;
+                    
+                    top: 210px;
+                    position: absolute;
+                    left: 5%;
+                    
+                    #bookBox {
+                        margin-top: 30px;
+                        margin-left: 0;
+                        padding: 30px 60px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: rgba(55, 55, 55, 0.4);
+                        
+                        color: rgb(255, 255, 255);
+                        width: 100%;
+                        #b-title{
+                            font-size: 4.5 em;
+                        }
+                        #b-author{
+                            font-size: 1 em;
+                        }
+                        
+                    }
+                    
+                }
+                #audiobooks-container{
+                    width: 40%;
+                    
+                    top: 210px;
+                    right: 5%;
+                position: absolute;
+                    #audiobookBox {
+                        margin-top: 30px;
+                        margin-left: 0;
+                        padding: 30px 60px;
+                        background-color: rgba(55, 55, 55, 0.4);
+                        border-radius: 10px;
+                        color: white;
+                        width: 100%;
+                        #a-b-title{
+                            font-size: 1.5 em;
+                        }
+                        #a-b-author{
+                            font-size: 1 em;
+                        }
+                    }
+                }
+
+            }
+        
+
+            
+        
+    }
+    
