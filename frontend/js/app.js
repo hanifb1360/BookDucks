@@ -19,12 +19,19 @@ let getBooks = async () => {
         <p id="b-rating"><strong>Rating: </strong>${book.attributes.rating}</p>
     
         <img class="img" src="http://localhost:1337${book.attributes.coverPhoto.data.attributes.url}" alt="cover photo">
+
+        <p><strong>Owners Information:</strong></p>
+        <p>${book.attributes.user.data.attributes.username}</p>
+        
         
         <div/>
         `;
+     
+        
   });
 };
 let getAudiobooks = async () => {
+  
   let response = await axios.get("http://localhost:1337/api/audio-books?populate=*", {
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -32,6 +39,7 @@ let getAudiobooks = async () => {
   });
   console.log(response.data);
   response.data.data.forEach((audiobook) => {
+    console.log("sss", audiobook);
     document.querySelector("#audiobooks-container").innerHTML += `
         <div id="audiobookBox">
         
@@ -42,6 +50,9 @@ let getAudiobooks = async () => {
         <p id="a-b-rating"><strong>Rating:</strong>${audiobook.attributes.rating}</p>
 
         <img class="img" src="http://localhost:1337${audiobook.attributes.coverPhoto.data.attributes.url}" alt="cover photo">
+
+        <p><strong>Owners Information:</strong></p>
+        <p>${audiobook.attributes.user.data.attributes.username}</p>
         
         <div/>
         `;
