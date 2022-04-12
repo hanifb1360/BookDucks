@@ -51,7 +51,7 @@ let getAudiobooks = async () => {
 
         <img class="img" src="http://localhost:1337${audiobook.attributes.coverPhoto.data.attributes.url}" alt="cover photo">
 
-        <p><strong>Owners Information:</strong></p>
+        <p><strong>Owner's Information:</strong></p>
         <p>${audiobook.attributes.user.data.attributes.username}</p>
         
         <div/>
@@ -59,22 +59,7 @@ let getAudiobooks = async () => {
   });
 };
 
-let buyBook = async () => {
-  let response = await axios.post(
-    "http://localhost:1337/api/owneds",
-    {
-      data: {
-        title: books.title.value,
-        author: books.author.value,
-      },
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
-      },
-    }
-  );
-};
+
 
 let checkIfLoggedIn = () => {
   if (sessionStorage.getItem("token")) {
