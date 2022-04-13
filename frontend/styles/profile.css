@@ -22,19 +22,6 @@
           align-items: center;
 }
 
-* body #title {
-  margin-top: 20px;
-  letter-spacing: 5px;
-  font-family: 'Raleway', sans-serif;
-}
-
-* body #user-container {
-  margin-top: 10px;
-  background-color: #363636;
-  color: white;
-  padding: 100px 40px;
-}
-
 * body header {
   height: 100px;
   width: 100%;
@@ -79,53 +66,59 @@
   color: #21cfe3;
 }
 
-* body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  gap: 10px;
+* body #title {
+  margin-top: 20px;
+  letter-spacing: 5px;
+  font-family: 'Raleway', sans-serif;
 }
 
-* body .getButtonsBox {
-  padding: 20px;
-  background-color: #105882;
-  width: 100%;
-  color: aliceblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* body .getButtonsBox .btn {
-  padding: 10px 40px;
-  border: 1px solid white;
-  background: none;
+* body #user-container {
+  margin-top: 10px;
+  background-color: #363636;
   color: white;
-  letter-spacing: .2rem;
+  padding: 100px 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+* body .getbtn {
+  letter-spacing: 10px;
+  padding: 20px 70px;
+  border: none;
+  background: #606060;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 40px;
   -webkit-animation: ease 0.5s;
           animation: ease 0.5s;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
-* body .getButtonsBox .btn:hover, * body .getButtonsBox .btn:focus {
-  border: 1px solid #21cfe3;
-  color: #21cfe3;
+* body .getbtn:hover, * body .getbtn:focus {
+  background: #4c4c4c;
+  color: #1fe9ff;
+  -webkit-box-shadow: #1fe9ff 0px 5px 10px -2px;
+          box-shadow: #1fe9ff 0px 5px 10px -2px;
+}
+
+* body #ownedBooksBox {
+  width: 100%;
+  height: 500px;
+  background-color: #37596f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=profile.css.map */

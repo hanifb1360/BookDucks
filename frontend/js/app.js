@@ -9,7 +9,7 @@ let getBooks = async () => {
   });
 
   response.data.data.forEach((book) => {
-    console.log(book);
+    console.log("books list", book);
     document.querySelector("#books-container").innerHTML += `
         <div id="bookBox">
         <p id="b-title"><strong>Title: </strong>${book.attributes.title}</p>

@@ -10,18 +10,6 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        #title {
-            margin-top: 20px;
-            letter-spacing: 5px;
-            font-family: 'Raleway', sans-serif;
-        }
-        #user-container{
-            margin-top: 10px;
-            background-color: rgb(54, 54, 54);
-            color: white;
-            padding: 100px 40px;
-        }
-       
 
         header{
             height: 100px;
@@ -55,39 +43,60 @@
         }
         }
 
-        main {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            gap: 10px;  
-            }
-            .getButtonsBox{
-                padding: 20px;
-                background-color: rgb(16, 88, 130);
-                width: 100%;
-                color: aliceblue;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                
+        #title {
+            margin-top: 20px;
+            letter-spacing: 5px;
+            font-family: 'Raleway', sans-serif;
+        }
+        #user-container{
+            margin-top: 10px;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            padding: 100px 40px;
+            border-radius: 20px;
+            border: none;
+        }
 
-                .btn{
-                    padding: 10px 40px;
-                    border: 1px solid white;
-                    background: none;
-                    color: white;
-                    letter-spacing: .2rem;
-                    animation: ease 0.5s;
-                    transition: all ease 0.5s;
+        .getbtn {
+            letter-spacing: 10px;
+            padding: 20px 70px;
+            border: none;
+            background: rgb(96, 96, 96);
+            color: rgb(255, 255, 255);
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 40px;
+            animation: ease 0.5s;
+            transition: all ease 0.5s;
 
                     &:hover,
                     &:focus { 
-                        border: 1px solid rgb(33, 207, 227);
-                        color: rgb(33, 207, 227);
+                        background: rgb(76, 76, 76);
+                        color: rgb(31, 233, 255);
+                        box-shadow: rgb(31, 233, 255) 0px 5px 10px -2px;
                       
                     }
-            }
-                    
-        }}}
+
+        
+            
+        }
+
+        #ownedBooksBox{
+            width: 100%;
+            height: 500px;
+            background-color: rgb(55, 89, 111);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            
+
+
+        }
+       
+
+    }
+}
+
+       
