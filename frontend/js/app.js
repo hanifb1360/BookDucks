@@ -10,6 +10,10 @@ let getBooks = async () => {
 
   response.data.data.forEach((book) => {
     console.log("books list", book);
+
+
+    
+    
     document.querySelector("#books-container").innerHTML += `
         <div id="bookBox">
         <p id="b-title"><strong>Title: </strong>${book.attributes.title}</p>
@@ -17,6 +21,7 @@ let getBooks = async () => {
         <p id="b-publicationDate"><strong>Publication Date: </strong>${book.attributes.publicationDate}</p>
         <p id="b-numberOfPages"><strong>Number Of Pages: </strong>${book.attributes.numberOfPages}</p>
         <p id="b-rating"><strong>Rating: </strong>${book.attributes.rating}</p>
+        <p id="b-genre"><strong>Genre: </strong>${book.attributes.genres.data[0].attributes.genreName}</p>
     
         <img class="img" src="http://localhost:1337${book.attributes.coverPhoto.data.attributes.url}" alt="cover photo">
 
@@ -26,17 +31,17 @@ let getBooks = async () => {
         
         <div/>
         `;
-     
-        
   });
 };
 let getAudiobooks = async () => {
-  
-  let response = await axios.get("http://localhost:1337/api/audio-books?populate=*", {
-    headers: {
-      Authorization: `Bearer ${sessionStorage.getItem("token")}`,
-    },
-  });
+  let response = await axios.get(
+    "http://localhost:1337/api/audio-books?populate=*",
+    {
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+      },
+    }
+  );
   console.log(response.data);
   response.data.data.forEach((audiobook) => {
     console.log("sss", audiobook);
@@ -48,6 +53,7 @@ let getAudiobooks = async () => {
         <p Publication Date id="a-b-publicationDate"><strong>Publication Date:</strong>${audiobook.attributes.publicationDate}</p>
         <p id="a-b-length"><strong>Length:</strong>${audiobook.attributes.length}</p>
         <p id="a-b-rating"><strong>Rating:</strong>${audiobook.attributes.rating}</p>
+        <p id="a-b-genre"><strong>Genre: </strong>${audiobook.attributes.genres.data[0].attributes.genreName}</p>
 
         <img class="img" src="http://localhost:1337${audiobook.attributes.coverPhoto.data.attributes.url}" alt="cover photo">
 
@@ -59,14 +65,10 @@ let getAudiobooks = async () => {
   });
 };
 
-
-
 let checkIfLoggedIn = () => {
   if (sessionStorage.getItem("token")) {
-
     document.getElementById("loggedInMessage").innerHTML =
       sessionStorage.getItem("username");
   }
 };
 checkIfLoggedIn();
-

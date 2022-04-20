@@ -57,25 +57,36 @@
             border: none;
         }
 
-        .getbtn {
-            letter-spacing: 10px;
-            padding: 20px 70px;
-            border: none;
-            background: rgb(96, 96, 96);
-            color: rgb(255, 255, 255);
-            margin-top: 40px;
-            margin-bottom: 40px;
-            border-radius: 40px;
-            animation: ease 0.5s;
-            transition: all ease 0.5s;
+        #btn-box {
 
-                    &:hover,
-                    &:focus { 
-                        background: rgb(76, 76, 76);
-                        color: rgb(31, 233, 255);
-                        box-shadow: rgb(31, 233, 255) 0px 5px 10px -2px;
-                      
-                    }
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+            .getbtn {
+                letter-spacing: 10px;
+                padding: 10px 20px;
+                border: none;
+                background: rgb(96, 96, 96);
+                color: rgb(255, 255, 255);
+                margin-top: 40px;
+                margin-bottom: 40px;
+                border-radius: 40px;
+                animation: ease 0.5s;
+                transition: all ease 0.5s;
+    
+                        &:hover,
+                        &:focus { 
+                            background: rgb(76, 76, 76);
+                            color: rgb(31, 233, 255);
+                            box-shadow: rgb(31, 233, 255) 0px 5px 10px -2px;
+                          
+                        }
+
+        }
+
+        
 
         
             
@@ -86,12 +97,55 @@
             height: 500px;
             background-color: rgb(55, 89, 111);
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
-            flex-direction: column;
-
             
+           
+            .owned-info-box {
 
+                width: 40%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                flex-direction: column;
+                margin-top: 5%;
+                
+
+            }
+
+            .owned-book {
+                background-color: aliceblue;
+                border-radius: 20 ;
+                width: 100%;
+               padding: 10px 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+
+               border-radius: 14px;
+                margin-top: 10px;
+                color: rgb(45, 45, 45);
+
+                .lendbtn{
+                    margin-top: 2%;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 25px;
+                    background-color: rgb(19, 69, 100);
+                    color: aliceblue;
+                    animation: ease 0.5s;
+                    transition: all ease 0.5s;
+                    &:hover,
+                    &:focus { 
+                        background: rgb(76, 76, 76);
+                        color: rgb(31, 233, 255);
+                        box-shadow: rgb(31, 233, 255) 0px 5px 10px -2px;
+                      
+                    }
+                }
+
+            }
 
         }
        
